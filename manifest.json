@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Gemini",
+  "description": "Alt+Shift+U: Open Gemini with selected text. Alt+Shift+O: Show window. Alt+Shift+Y: Close window.",
+  "version": "1.0.8",
+  "action": {
+    "default_title": "Open Gemini with selected text"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://gemini.google.com/*", "https://*.gemini.google.com/*"],
+      "js": ["gemini-fill.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "commands": {
+    "send-to-gemini": {
+      "suggested_key": {
+        "default": "Alt+Shift+U",
+        "mac": "Option+Shift+U"
+      },
+      "description": "Open Gemini with selected text"
+    },
+    "close-gemini": {
+      "suggested_key": {
+        "default": "Alt+Shift+Y",
+        "mac": "Option+Shift+Y"
+      },
+      "description": "Close Gemini window"
+    },
+    "show-gemini": {
+      "suggested_key": {
+        "default": "Alt+Shift+O",
+        "mac": "Option+Shift+O"
+      },
+      "description": "Show minimized Gemini window"
+    }
+  }
+}
