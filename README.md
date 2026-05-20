@@ -23,7 +23,7 @@ A lightweight, keyboard-driven Chrome extension that instantly sends selected te
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" (top right)
 4. Click "Load unpacked"
-5. Select the `copy-gemini-extension` folder
+5. Select the `copy-gemini` folder
 6. The extension is now ready to use!
 
 ## How to Use
@@ -59,9 +59,7 @@ copy-gemini-extension/
 ├── background.js        # Window management & command routing
 ├── content.js          # Text selection capture
 ├── gemini-fill.js      # Auto-fill & auto-submit logic
-├── README.md           # This file
-├── icons/              # Extension icons
-└── [other files]       # Legacy/disabled files
+└── README.md           # This file
 ```
 
 ## How It Works
@@ -90,17 +88,13 @@ copy-gemini-extension/
 
 ## Version History
 
-### v1.0.8
-- Added window show/restore functionality (Alt+Shift+O)
-- Added window close functionality (Alt+Shift+Y)
-- Implemented single window mode (closes old window when opening new)
-- Removed Alt+Shift+W shortcut (kept only Alt+Shift+U)
-- Updated to better descriptions
-
 ### v1.0.0
 - Initial release
 - Alt+Shift+U to open Gemini with selected text
 - Auto-fill and auto-submit functionality
+- Added window show/restore functionality (Alt+Shift+O)
+- Added window close functionality (Alt+Shift+Y)
+- Implemented single window mode (closes old window when opening new)
 
 ## Privacy
 
@@ -111,7 +105,27 @@ copy-gemini-extension/
 
 ## License
 
-See LICENSE file in the root directory
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Support
 
